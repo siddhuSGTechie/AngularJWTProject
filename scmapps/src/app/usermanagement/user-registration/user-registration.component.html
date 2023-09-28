@@ -1,0 +1,141 @@
+<section class="h-100 bg-green">
+    <div class="container py-5 h-100">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col">
+          <div class="card card-registration my-4">
+            <div class="row g-0">
+              <div class="col-xl-6 d-none d-xl-block">
+
+                <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-registration/img4.webp"
+                  alt="Sample photo" class="img-fluid"
+                  style="border-top-left-radius: .25rem; border-bottom-left-radius: .25rem;" />
+                  
+              </div>
+              <div class="col-xl-6">
+                <div class="card-body p-md-5 text-black">
+                    <form #loginreg="ngForm" (ngSubmit)="userReg(loginreg)">
+                  <h3 class="mb-5 text-uppercase">New Hire registration form</h3>
+  
+                  <div class="row">
+                    <div class="col-md-6 mb-4">
+                      <div class="form-outline"> 
+                        <input type="text" id="form3Example1m" ngModel name="firstname" class="form-control form-control-lg" />
+                        <label class="form-label" for="form3Example1m">First name</label>
+                      </div>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                      <div class="form-outline">
+                        <input type="text" id="form3Example1n" ngModel name="lastname" class="form-control form-control-lg" />
+                        <label class="form-label" for="form3Example1n">Last name</label>
+                      </div>
+                    </div>
+                  </div>
+  
+                  <div class="row">
+                    <div class="col-md-6 mb-4">
+                      <div class="form-outline">
+                        <input type="text" id="form3Example1m1" ngModel name="username"  class="form-control form-control-lg" />
+                        <label class="form-label" for="form3Example1m1">User Name</label>
+                      </div>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                      <div class="form-outline">
+                        <input type="text" id="form3Example1n1" ngModel name="password"  class="form-control form-control-lg" />
+                        <label class="form-label" for="form3Example1n1">Password</label>
+                      </div>
+                    </div>
+                  </div>
+  
+                  <div class="form-outline mb-4">
+                    <input type="text" id="form3Example8" ngModel name="phonenum"  class="form-control form-control-lg" />
+                    <label class="form-label" for="form3Example8">Phone</label>
+                  </div>
+  
+                  <div class="d-md-flex justify-content-start align-items-center mb-4 py-2">
+  
+                    <h6 class="mb-0 me-4">Gender: </h6>
+  
+                    <div class="form-check form-check-inline mb-0 me-4">
+                      <input class="form-check-input" type="radio" ngModel name="gender" id="femaleGender"
+                        value="Female" />
+                      <label class="form-check-label" for="femaleGender">Female</label>
+                    </div>
+  
+                    <div class="form-check form-check-inline mb-0 me-4">
+                      <input class="form-check-input" type="radio" ngModel name="gender" id="maleGender"
+                        value="Male" />
+                      <label class="form-check-label" for="maleGender">Male</label>
+                    </div>
+  
+                    <div class="form-check form-check-inline mb-0">
+                      <input class="form-check-input" type="radio" ngModel name="gender" id="otherGender"
+                        value="Other" />
+                      <label class="form-check-label" for="otherGender">Other</label>
+                    </div>
+                  </div>
+  
+                  <div class="row">
+                    <div class="col-md-6 mb-4">
+  
+                      <select class="select" ngModel name="country">
+                        <option value="Country">Country</option>
+                        <option value="Singapore">Singapore</option>
+                        <option value="Malaysia">Malaysia</option>
+                        <option value="India">India</option>
+                      </select>
+  
+                    </div>
+                    <div class="col-md-6 mb-4">
+  
+                      <select class="select"  ngModel name="city" >
+                        <option value="City">City</option>
+                        <option value="Tuas">Tuas</option>
+                        <option value="ToaPayoh">ToaPayoh</option>
+                        <option value="Jurong">Jurong</option>
+                      </select>
+  
+                    </div>
+                  </div>
+
+                  <div class="col-md-6 mb-4">
+  
+                    <select class="select"  ngModel name="cityDemo" >
+                      <option>---Select---</option>
+                      <option [value]="cit.country" *ngFor="let cit of cityList">{{cit.city}}</option>
+                    </select>
+                  </div>
+  
+                  <div class="form-outline mb-4">
+                    <input type="text" id="form3Example9" ngModel name="dob"  class="form-control form-control-lg" />
+                    <label class="form-label" for="form3Example9">DOB</label>
+                  </div>
+  
+                  <div class="form-outline mb-4">
+                    <input type="text" id="form3Example90" ngModel name="pincode"  class="form-control form-control-lg" />
+                    <label class="form-label" for="form3Example90">Pincode</label>
+                  </div>
+  
+                  <div class="form-outline mb-4">
+                    <input type="text" id="form3Example99" ngModel name="department"  class="form-control form-control-lg" />
+                    <label class="form-label" for="form3Example99">Department</label>
+                  </div>
+  
+                  <div class="form-outline mb-4">
+                    <input type="text" id="form3Example97" ngModel name="email"  class="form-control form-control-lg" />
+                    <label class="form-label" for="form3Example97">Email ID</label>
+                  </div>
+  
+                  <div class="d-flex justify-content-end pt-3">
+                    <button type="button" class="btn btn-light btn-lg" (click)="reset()">Reset all</button>
+                    <button type="submit" class="btn gradient-custom-4 btn-lg ms-2">Submit form</button>
+                    <button type="button" class="btn gradient-custom-4 btn-lg ms-2" routerLink="/admin">Back<</button>
+                  </div>
+                </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>

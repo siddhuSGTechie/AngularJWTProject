@@ -1,0 +1,26 @@
+{
+	"folders": [
+		{
+			"path": "../../../../../../my-app"
+		},
+		{
+			"path": "../../../../../demoApp"
+		},
+		{
+			"path": "../../../.."
+		},
+		{
+			"path": "../../../../../learn-observable"
+		},
+		{
+			"path": "../../../../../stepperDemo"
+		},
+		{
+			"path": "../../../../../emitrack"
+		},
+		{
+			"path": "../../../../../signupdemostepper"
+		}
+	],
+	"settings": {}
+}

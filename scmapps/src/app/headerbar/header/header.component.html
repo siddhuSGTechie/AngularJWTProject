@@ -1,0 +1,41 @@
+<nav class="navbar navbar-expand-lg navbar-dark gradient-custom-4"> 
+    <div class="container-fluid">
+      <a class="navbar-brand text-white" href="#">Seatrium</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active text-white" aria-current="page" routerLink="/home">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active text-white" aria-current="page" routerLink="/emitrack">Emi Track</a>
+          </li>
+          <li class="nav-item">  
+            <a class="nav-link active text-white" aria-current="page" routerLink="/admin" *ngIf="backendService.roleMatch(['Admin'])">Admin Dashboard</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active text-white" aria-current="page" routerLink="/user" *ngIf="backendService.roleMatch(['User'])">User Dashboard</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active text-white" aria-current="page" routerLink="/admin">Bespoke</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active text-white" aria-current="page" routerLink="/admin">People Soft</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active text-white" aria-current="page" routerLink="/helpdesk">IT HelpDesk</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active text-white" aria-current="page" routerLink="/admin">Knowledge Center</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active text-white" aria-current="page" routerLink="/admin">FAQ</a>
+          </li>
+        </ul>
+        <!-- <button type="button"  class="btn gradient-custom-4" routerLink="/home" *ngIf="! isLoggedIn()">Login</button> -->
+        <button type="button" class="btn gradient-custom-4 text-white" *ngIf="isLoggedIn()" (click)="logout()">Logout</button>
+      </div>
+    </div>
+  </nav>
